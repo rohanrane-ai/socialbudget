@@ -1,0 +1,11 @@
+name = "recruiting-social_budget"
+enable_filestore = false
+enable_postgres = false
+enable_mysql = false
+enable_secrets = false
+enable_api_gateway = false
+enable_slack = false
+
+[metadata]
+  owner = "rohan.rane@applied.co"
+  description = "Go + React hello world app"

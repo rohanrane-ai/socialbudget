@@ -1,0 +1,426 @@
+[
+  {
+    "id": "andrea_tu",
+    "name": "Andrea Tu",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "erika_komatsu_palacios",
+    "name": "Erika Komatsu-Palacios",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "jonathan_cheng",
+    "name": "Jonathan Cheng",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "kyle_clark",
+    "name": "Kyle Clark",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "anastasia_ecin",
+    "name": "Anastasia Ecin",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "doug_altman",
+    "name": "Doug Altman",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "ryan_to",
+    "name": "Ryan To",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "zoya_hsiao",
+    "name": "Zoya Hsiao",
+    "manager": "Catherine Wang",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "liz_morgan",
+    "name": "Liz Morgan",
+    "manager": "Eitan Sheer",
+    "team": "Senior Managers",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "catherine_wang",
+    "name": "Catherine Wang",
+    "manager": "Eitan Sheer",
+    "team": "Recruiting Operations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sean_farris",
+    "name": "Sean Farris",
+    "manager": "Liz Morgan",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "gabriel_mccarty",
+    "name": "Gabriel McCarty",
+    "manager": "Liz Morgan",
+    "team": "Engineering Leadership",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "nick_gutierrez",
+    "name": "Nick Gutierrez",
+    "manager": "Liz Morgan",
+    "team": "Engineering Leadership",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "yang_ruan",
+    "name": "Yang Ruan",
+    "manager": "Liz Morgan",
+    "team": "Engineering Leadership",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "anthony_o_keefe",
+    "name": "Anthony O'Keefe",
+    "manager": "Steven Duong",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "melisa_dindoruk",
+    "name": "Melisa Dindoruk",
+    "manager": "Steven Duong",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "christine_hoang",
+    "name": "Christine Hoang",
+    "manager": "Steven Duong",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "mj_ji",
+    "name": "MJ Ji",
+    "manager": "Steven Duong",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "patrick_ku",
+    "name": "Patrick Ku",
+    "manager": "Steven Duong",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "steven_duong",
+    "name": "Steven Duong",
+    "manager": "Liz Morgan",
+    "team": "Vehicle OS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sabrina_chan",
+    "name": "Sabrina Chan",
+    "manager": "Pri Jain",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "aileen_zheng",
+    "name": "Aileen Zheng",
+    "manager": "Pri Jain",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "michelle_zaw",
+    "name": "Michelle Zaw",
+    "manager": "Pri Jain",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sonia_zu",
+    "name": "Sonia Zu",
+    "manager": "Pri Jain",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "kristy_wang",
+    "name": "Kristy Wang",
+    "manager": "Pri Jain",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "pri_jain",
+    "name": "Pri Jain",
+    "manager": "Steven Duong",
+    "team": "Vehicle Foundations",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "daen_ekpa",
+    "name": "Daen Ekpa",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "johnie_chan",
+    "name": "Johnie Chan",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "jocelyn_martin",
+    "name": "Jocelyn Martin",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "joy_cheng",
+    "name": "Joy Cheng",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sophia_conn",
+    "name": "Sophia Conn",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "tom_callahan",
+    "name": "Tom Callahan",
+    "manager": "Sean Farris",
+    "team": "Core Engineering",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "daniel_yang",
+    "name": "Daniel Yang",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "helen_tian",
+    "name": "Helen Tian",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "donald_yan",
+    "name": "Donald Yan",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "isabelle_jia",
+    "name": "Isabelle Jia",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sandy_wu",
+    "name": "Sandy Wu",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "nathalie_song",
+    "name": "Nathalie Song",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "zohra_arya",
+    "name": "Zohra Arya",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sonam_huang",
+    "name": "Sonam Huang",
+    "manager": "Sharlene Tumber",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "sharlene_tumber",
+    "name": "Sharlene Tumber",
+    "manager": "Liz Morgan",
+    "team": "SDS",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "jason_yang",
+    "name": "Jason Yang",
+    "manager": "Eitan Sheer",
+    "team": "Senior Managers",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "breann_gonzalez",
+    "name": "Breann Gonzalez",
+    "manager": "Jason Yang",
+    "team": "Commercial",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "julie_ann_barrozo",
+    "name": "Julie Ann Barrozo",
+    "manager": "Jason Yang",
+    "team": "Commercial",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "joey_gong",
+    "name": "Joey Gong",
+    "manager": "Jason Yang",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "del_crockett",
+    "name": "Del Crockett",
+    "manager": "Jason Yang",
+    "team": "Commercial",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "gabby_albana",
+    "name": "Gabby Albana",
+    "manager": "Jason Yang",
+    "team": "Commercial",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "christopher_cullen",
+    "name": "Christopher Cullen",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "megan_garcia",
+    "name": "Megan Garcia",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "molly_cha",
+    "name": "Molly Cha",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "dorothy_fields",
+    "name": "Dorothy Fields",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "rohan_rane",
+    "name": "Rohan Rane",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  },
+  {
+    "id": "hannah_nguyen",
+    "name": "Hannah Nguyen",
+    "manager": "Joey Gong",
+    "team": "Commercial HQ",
+    "department": "Recruiting",
+    "active": true
+  }
+]
