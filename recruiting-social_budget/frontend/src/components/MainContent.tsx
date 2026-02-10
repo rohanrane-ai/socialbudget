@@ -102,6 +102,18 @@ const MainContent = () => {
     [employees]
   )
 
+  const filteredTeams = useMemo(() => {
+    const query = attendeeQuery.trim().toLowerCase()
+    return teamNames.filter(teamName => {
+      const hasSomeoneToAdd = employees.some(
+        e => e.team === teamName && !attendees.includes(e.id)
+      )
+      if (!hasSomeoneToAdd) return false
+      if (!query) return true
+      return teamName.toLowerCase().includes(query)
+    })
+  }, [teamNames, employees, attendeeQuery, attendees])
+
   const filteredEmployees = useMemo(() => {
     const query = attendeeQuery.trim().toLowerCase()
     return employees.filter(employee => {
@@ -114,6 +126,15 @@ const MainContent = () => {
       return `${employee.name} ${employee.team}`.toLowerCase().includes(query)
     })
   }, [employees, attendeeQuery, attendees])
+
+  const dropdownItems = useMemo(() => {
+    const teamEntries = filteredTeams.map(team => ({ type: 'team' as const, team }))
+    const employeeEntries = filteredEmployees.map(employee => ({
+      type: 'employee' as const,
+      employee,
+    }))
+    return [...teamEntries, ...employeeEntries]
+  }, [filteredTeams, filteredEmployees])
 
   const costPerPerson = useMemo(() => {
     const amountValue = Number(amount)
@@ -187,7 +208,7 @@ const MainContent = () => {
 
   useEffect(() => {
     setHighlightIndex(0)
-  }, [attendeeQuery, filteredEmployees.length])
+  }, [attendeeQuery, dropdownItems.length])
 
   const handleAttendeeSelect = (employeeId: string) => {
     setAttendees(prev => [...prev, employeeId])
@@ -220,7 +241,7 @@ const MainContent = () => {
     if (event.key === 'ArrowDown') {
       event.preventDefault()
       setIsAttendeeOpen(true)
-      setHighlightIndex(prev => Math.min(prev + 1, filteredEmployees.length - 1))
+      setHighlightIndex(prev => Math.min(prev + 1, dropdownItems.length - 1))
       return
     }
 
@@ -231,7 +252,7 @@ const MainContent = () => {
       return
     }
 
-    if (event.key === 'Enter' && isAttendeeOpen) {
+    if (event.key === 'Enter' && isAttendeeOpen && dropdownItems.length > 0) {
       event.preventDefault()
       const query = attendeeQuery.trim().toLowerCase()
       const matchedTeam = teamNames.find(t => t.toLowerCase() === query)
@@ -239,10 +260,12 @@ const MainContent = () => {
         handleAddTeam(matchedTeam)
         return
       }
-      if (filteredEmployees.length > 0) {
-        const selected = filteredEmployees[highlightIndex]
-        if (selected) {
-          handleAttendeeSelect(selected.id)
+      const item = dropdownItems[highlightIndex]
+      if (item) {
+        if (item.type === 'team') {
+          handleAddTeam(item.team)
+        } else {
+          handleAttendeeSelect(item.employee.id)
         }
       }
     }
@@ -528,24 +551,40 @@ const MainContent = () => {
                         className="flex-1 min-w-[140px] border-none p-0 text-sm focus:outline-none"
                       />
                     </div>
-                    {isAttendeeOpen && filteredEmployees.length > 0 && (
+                    {isAttendeeOpen && dropdownItems.length > 0 && (
                       <div className="absolute z-10 mt-2 max-h-56 w-full overflow-auto rounded-md border border-gray-200 bg-white shadow">
-                        {filteredEmployees.map((employee, index) => (
-                          <button
-                            key={employee.id}
-                            type="button"
-                            onMouseDown={event => {
-                              event.preventDefault()
-                              handleAttendeeSelect(employee.id)
-                            }}
-                            className={`flex w-full items-center justify-between px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 ${
-                              index === highlightIndex ? 'bg-gray-50' : ''
-                            }`}
-                          >
-                            <span>{employee.name}</span>
-                            <span className="text-xs text-gray-500">— {employee.team}</span>
-                          </button>
-                        ))}
+                        {dropdownItems.map((item, index) =>
+                          item.type === 'team' ? (
+                            <button
+                              key={`team-${item.team}`}
+                              type="button"
+                              onMouseDown={event => {
+                                event.preventDefault()
+                                handleAddTeam(item.team)
+                              }}
+                              className={`flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-gray-50 ${
+                                index === highlightIndex ? 'bg-gray-50' : ''
+                              } text-primary font-medium`}
+                            >
+                              <span>Add team: {item.team}</span>
+                            </button>
+                          ) : (
+                            <button
+                              key={item.employee.id}
+                              type="button"
+                              onMouseDown={event => {
+                                event.preventDefault()
+                                handleAttendeeSelect(item.employee.id)
+                              }}
+                              className={`flex w-full items-center justify-between px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 ${
+                                index === highlightIndex ? 'bg-gray-50' : ''
+                              }`}
+                            >
+                              <span>{item.employee.name}</span>
+                              <span className="text-xs text-gray-500">— {item.employee.team}</span>
+                            </button>
+                          )
+                        )}
                       </div>
                     )}
                   </div>
