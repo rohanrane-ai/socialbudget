@@ -97,6 +97,11 @@ const MainContent = () => {
     return mapping
   }, [employees])
 
+  const teamNames = useMemo(
+    () => [...new Set(employees.map(e => e.team))],
+    [employees]
+  )
+
   const filteredEmployees = useMemo(() => {
     const query = attendeeQuery.trim().toLowerCase()
     return employees.filter(employee => {
@@ -190,6 +195,17 @@ const MainContent = () => {
     setIsAttendeeOpen(true)
   }
 
+  const handleAddTeam = (teamName: string) => {
+    const toAdd = employees
+      .filter(e => e.team === teamName && !attendees.includes(e.id))
+      .map(e => e.id)
+    if (toAdd.length > 0) {
+      setAttendees(prev => [...prev, ...toAdd])
+    }
+    setAttendeeQuery('')
+    setIsAttendeeOpen(true)
+  }
+
   const handleAttendeeRemove = (employeeId: string) => {
     setAttendees(prev => prev.filter(id => id !== employeeId))
   }
@@ -215,11 +231,19 @@ const MainContent = () => {
       return
     }
 
-    if (event.key === 'Enter' && isAttendeeOpen && filteredEmployees.length > 0) {
+    if (event.key === 'Enter' && isAttendeeOpen) {
       event.preventDefault()
-      const selected = filteredEmployees[highlightIndex]
-      if (selected) {
-        handleAttendeeSelect(selected.id)
+      const query = attendeeQuery.trim().toLowerCase()
+      const matchedTeam = teamNames.find(t => t.toLowerCase() === query)
+      if (matchedTeam) {
+        handleAddTeam(matchedTeam)
+        return
+      }
+      if (filteredEmployees.length > 0) {
+        const selected = filteredEmployees[highlightIndex]
+        if (selected) {
+          handleAttendeeSelect(selected.id)
+        }
       }
     }
 
@@ -500,7 +524,7 @@ const MainContent = () => {
                         onKeyDown={handleAttendeeKeyDown}
                         onFocus={() => setIsAttendeeOpen(true)}
                         onBlur={() => setTimeout(() => setIsAttendeeOpen(false), 120)}
-                        placeholder={attendees.length === 0 ? 'Search employees' : ''}
+                        placeholder={attendees.length === 0 ? 'Search employees or type a team name and press Enter' : ''}
                         className="flex-1 min-w-[140px] border-none p-0 text-sm focus:outline-none"
                       />
                     </div>
